@@ -1,0 +1,25 @@
+# https://lefthook.dev/configuration/index.html
+prepare-commit-msg:
+  commands:
+    commitizen:
+      skip: rebase
+      interactive: true
+      run: npx cz --hook
+      env:
+        LEFTHOOK: 0
+commit-msg:
+  commands:
+    "lint commit message":
+      run: cog verify "$(cat {1})"
+pre-commit:
+  commands:
+    "generate README table of contents":
+      skip: rebase
+      glob: "README.md"
+      run: >
+        doctoc {staged_files}
+
+      stage_fixed: true
+    "detect secrets":
+      files: git diff --name-only --diff-filter=d --staged
+      run: gitleaks protect --no-banner --staged --redact --verbose
