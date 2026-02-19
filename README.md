@@ -1,6 +1,10 @@
 # swayfx configuration
 
-`This repository contains the swayfx configuration for @s0cks`
+A swayfx configuration for @s0cks.
+
+## Theme
+
+The colours and theme for this configuration are based on the [Flexoki](https://stephango.com/flexoki) colors
 
 ## Install
 
