@@ -18,7 +18,7 @@ local SwayConfig =
   [''] +
   sway.FontInter(FontSize) +
   sway.Borders(BorderThickness, BorderThickness) +
-  sway.Touchpad() +
+  // sway.Touchpad() +
   sway.Systemd(true);
 
 {
