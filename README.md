@@ -1,6 +1,6 @@
 # swayfx configuration
 
-A swayfx configuration for @s0cks.
+A swayfx configuration for [@s0cks](https://github.com/s0cks).
 
 ## Theme
 
@@ -21,7 +21,6 @@ You will need the following to install the configuration:
 You can install this configuration by doing the following:
 
 ```sh
-# Create a shallow clone of this config in ~/.config/sway
-git clone --depth 1 git@github.com:s0cks/dot-swayfx.git ~/.config/sway
-jsonnet -S -m . config.jsonnet
+git clone --depth 1 git@github.com:s0cks/dot-swayfx.git ~/.config/sway # create a shallow clone of this config in ~/.config/sway
+jsonnet -S -m . config.jsonnet # generate the config file using Jsonnet
 ```
