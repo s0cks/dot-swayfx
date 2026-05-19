@@ -1,3 +1,36 @@
-# Read `man 5 sway` for a complete reference.
+# vim: filetype=swayconfig :
+# *** Do NOT edit ***
+# This file was auto-generated using Jsonnet
+#   ~ @s0cks
+
 include ~/.config/sway/custom.d/*
 include /etc/sway/config.d/*
+
+# Colors                  border   bg     text      indi  childborder
+client.focused            $pu      $bg    $paper    $pu   $pu
+client.focused_inactive   $bg      $bg    $paper    $bg   $bg
+client.unfocused          $bg      $bg    $paper    $bg   $bg
+client.urgent             $re      $bg    $paper    $re   $re
+
+# font
+font pango:Inter 9
+
+# borders
+default_border pixel 2
+default_floating_border pixel 2
+hide_edge_borders smart
+
+# touchpad
+input type:touchpad {
+  dwt enabled
+  middle_emulation enabled
+  natural_scroll enabled
+  tap enabled
+}
+
+
+# start systemd services
+exec systemctl --user import-environment DISPLAY WAYLAND_DISPLAY SWAYSOCK XDG_CURRENT_DESKTOP XDG_SESSION_TYPE
+exec systemctl --user start sway-session.target
+exec_always "swaymsg -t subscribe '[\"shutdown\"]' && systemctl --user stop sway-session.target"
+
