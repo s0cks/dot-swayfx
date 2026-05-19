@@ -2,9 +2,7 @@
 
 A swayfx configuration for [@s0cks](https://github.com/s0cks).
 
-## Theme
-
-This configuration adopts the [Flexoki](https://stephango.com/flexoki), by [@kepano](https://github.com/kepano), colors for its color scheme.
+`This configuration adopts the [Flexoki](https://stephango.com/flexoki), by [@kepano](https://github.com/kepano), colors for its color scheme.`
 
 ## Installation
 
